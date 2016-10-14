@@ -8,16 +8,16 @@ cp file ~my_project
 ...
 ```
 
-The Zsh has a handy feature called *named directory hashes* which can be seen as abbreviations for arbitrary directories. In contrast to simple
-aliases, they can be used at any place in a command.
+The Zsh has a handy feature called *named directory hashes* which can be seen as abbreviations, or bookmark, for arbitrary directories. In contrast to
+simple aliases, they can be used at any place in a command.
 
 However, typing this to add a new bookmark
 
 ```bash
-echo 'hash -d blu="/etc/"' >> ~/.zshrc && source ~/.zshrc
+echo 'hash -d my_project="~/programming_stuff/even/more/stuff/"' >> ~/.zshrc && source ~/.zshrc
 ```
 
-is a bit cumbersome, so this little script helps managing your bookmarks.
+is a bit cumbersome, so this little script helps managing the bookmarks.
 
 ## Usage
 
@@ -32,7 +32,7 @@ bom rm foo bar            removes the bookmarks ~foo and ~bar
 ```
 
 ## Installation
-Don't call bom.py directly, instead, put it anywhere you like and put this in your `.zshrc`:
+Don't call `bom.py` directly, instead, put it anywhere you like and put this in your `.zshrc`:
 
 ```bash
 bom() {
@@ -46,5 +46,5 @@ bom() {
 ```
 
 ------
-A small warning: this messes around with your `.zshrc` (but tries not to break stuff). If you don't want that, you can change the constant ZSHRC in
-bom.py to whatever you want.
+A small warning: this messes around with your `.zshrc` (but tries not to break stuff). If you don't want that, you can change the constant `ZSHRC` in
+`bom.py` to whatever you want.
