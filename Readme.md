@@ -32,6 +32,8 @@ bom rm foo bar            removes the bookmarks ~foo and ~bar
 ```
 
 ## Installation
+You need Python 3.
+
 Don't call `bom.py` directly, instead, put it anywhere you like and put this in your `.zshrc`:
 
 ```bash
